@@ -7,6 +7,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do  
   gem 'pry-rails'
