@@ -5,12 +5,9 @@ ruby '3.0.0'
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'devise'
+gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
-
-group :production do
-  gem 'pg'
-end
 
 group :development, :test do
   gem 'pry-rails'
