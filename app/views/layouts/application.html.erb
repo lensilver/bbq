@@ -16,7 +16,7 @@
       <div class="container">
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li class="navbar-brand"><%= link_to "BBQ", root_path %></li>
+            <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
             <% if user_signed_in? %>
               <li class="navbar-brand"><%= link_to "Профиль", current_user %></li>
               <li class="navbar-brand"><%= link_to "Выйти", destroy_user_session_path, :method => :delete %></li>
@@ -37,8 +37,9 @@
         </div>
 
         <footer>
-          <p>&copy; Company 2022</p>
+          <p>&copy; <%= t('app.company') %> 2022</p>
         </footer>
+        
       </div>
     </div>
 
