@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+
+  resources :subscriptions
+  resources :comments
   devise_for :users
   # корень сайта
   root "events#index"
-  resources :events
-  resources :users, only: [:show, :edit, :update]
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :events do
+    resources :comments, only: [:create, :destroy]
+
+    # вложенный ресурс подписок
+    resources :subscriptions, only: [:create, :destroy]
+  end
+  
+  resources :users, only: [:show, :edit, :update]  
 end

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Bbq" %></title>
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
     <%= csrf_meta_tags %>
 
     <%= stylesheet_pack_tag "application", media: "all" %>
@@ -16,7 +19,7 @@
       <div class="container">
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
+            <li class="navbar-brand"><%= link_to t('app.bbq'), root_path %></li>
             <% if user_signed_in? %>
               <li class="navbar-brand"><%= link_to "Профиль", current_user %></li>
               <li class="navbar-brand"><%= link_to "Выйти", destroy_user_session_path, :method => :delete %></li>
