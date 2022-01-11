@@ -17,7 +17,7 @@ ru:
         title: 'Название'
         address: 'Место проведения'
         datetime: 'Дата и время'
-        description: 'Описание'    
+        description: 'Описание'
       
   controllers:
     events:
@@ -46,3 +46,14 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
+  buttons:
+    profile: 'Профиль'
+    sign_out: 'Выйти'
+    sign_up: 'Зарегистрироваться'
+    sign_in: 'Войти'
+    log_in: 'Войти'
+
+  text:
+    forgot_password: 'Забыли пароль?'
+    characters_minimum: 'символов минимум'

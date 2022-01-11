@@ -1,29 +1,43 @@
-<h2>Sign up</h2>
+<h2><%= t('buttons.sign_up') %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= fa_icon('envelope') %>
+    </div>
+  </div>
+
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: false, autocomplete: "name" %>
+    <%= fa_icon('user') %>
+  </div>
   </div>
 
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> <%= t('text.characters_minimum') %>)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= fa_icon('lock') %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= fa_icon('lock') %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit t('buttons.sign_up'), class: "btn btn-primary mt-3" %>
   </div>
+  
 <% end %>
 
 <%= render "devise/shared/links" %>
