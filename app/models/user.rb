@@ -14,11 +14,12 @@ class User < ApplicationRecord
   before_validation :set_name, on: :create
 
   after_commit :link_subscriptions, on: :create
+  mount_uploader :avatar, AvatarUploader
 
   private
 
   def set_name
-    self.name = "Товарисч №#{rand(777)}" if self.name.blank?
+    self.name = 'Unnamed' if name.blank?
   end
 
   def link_subscriptions

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :photos
   resources :subscriptions
   resources :comments
   devise_for :users
@@ -11,6 +12,9 @@ Rails.application.routes.draw do
 
     # вложенный ресурс подписок
     resources :subscriptions, only: [:create, :destroy]
+
+    # Вложенные в ресурс события ресурсы фотографий
+    resources :photos, only: [:create, :destroy]
   end
   
   resources :users, only: [:show, :edit, :update]  

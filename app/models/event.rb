@@ -7,6 +7,7 @@ class Event < ApplicationRecord
   # Чтобы Рельсы понимали, какой именно класс будет лежать
   # в модели subscribers, надо указать source
   has_many :subscribers, through: :subscriptions, source: :user
+  has_many :photos
 
   # Валидируем юзера на присутствие.
   # валидируются по умолчанию
@@ -16,4 +17,8 @@ class Event < ApplicationRecord
   # У события должны быть заполнены место и время
   validates :address, presence: true
   validates :datetime, presence: true
+
+  def visitors
+    (subscribers + [user]).uniq
+  end
 end
