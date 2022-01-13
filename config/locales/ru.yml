@@ -66,6 +66,7 @@ ru:
     log_in: 'Войти'
     send_instructions: 'Отправьте мне инструкции по смене пароля'
     update: 'Обновить'
+    event_delete: 'Удалить событие'
 
   text:
     forgot_password: 'Забыли пароль?'
