@@ -3,7 +3,11 @@
 <% if errors.any? %>
   <div class="alert alert-danger">
     <div class="lead buffer-bottom">
-      В вашей форме <%= errors.count %> ошибок
+
+      <div class="col-2">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <%= t('errors.messages.not_saved', count: errors.count) %>
     </div>
 
     <ul>
