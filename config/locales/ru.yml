@@ -79,7 +79,7 @@ ru:
     unhappy: 'Недовольны?'
     back: 'Назад'
     are_you_sure: 'Вы уверены?'
-    
+    own_event: 'Такой пользователь уже существует!'
   errors:
     messages:
       not_saved:

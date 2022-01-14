@@ -15,6 +15,8 @@ class Subscription < ApplicationRecord
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
 
+  before_validation :email_exist, unless: -> { user.present? }
+
   # Если есть юзер, выдаем его имя,
   # если нет – дергаем исходный метод
   def user_name
@@ -33,5 +35,9 @@ class Subscription < ApplicationRecord
     else
       super
     end
+  end
+
+  def email_exist
+    errors.add(:user, message: I18n.t('text.own_event')) if User.find_by(email: user_email)
   end  
 end
