@@ -38,6 +38,6 @@ class Subscription < ApplicationRecord
   end
 
   def email_exist
-    errors.add(:user, message: I18n.t('text.own_event')) if User.find_by(email: user_email)
+    errors.add(:user, message: I18n.t('text.user_already_exists')) if User.find_by(email: user_email)
   end  
 end
