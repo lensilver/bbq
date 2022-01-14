@@ -79,7 +79,7 @@ ru:
     unhappy: 'Недовольны?'
     back: 'Назад'
     are_you_sure: 'Вы уверены?'
-
+    
   errors:
     messages:
       not_saved:
