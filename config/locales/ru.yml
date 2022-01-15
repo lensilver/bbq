@@ -22,6 +22,18 @@ ru:
         description: 'Описание'
       photo:
         photo: 'Фотография'
+      comment:
+        body: 'Комментарий'
+        user_name: 'Имя пользователя'
+      subscription:
+        user_name: 'Имя пользователя'
+        user_email: 'Email'
+    errors:
+      models:
+        subscription:
+          attributes:
+            user:
+              user_already_exists: 'уже существует!'
       
   controllers:
     events:
@@ -79,7 +91,7 @@ ru:
     unhappy: 'Недовольны?'
     back: 'Назад'
     are_you_sure: 'Вы уверены?'
-    user_already_exists: 'Такой пользователь уже существует!'
+    
   errors:
     messages:
       not_saved:
