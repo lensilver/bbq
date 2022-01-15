@@ -14,8 +14,7 @@ class Subscription < ApplicationRecord
   # Для конкретного event_id один юзер может подписаться только один раз (если юзер задан)
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
-
-  # before_validation :email_exist, unless: -> { user.present? }
+  
   validate :email_exist, unless: -> { user.present? }
 
   # Если есть юзер, выдаем его имя,
