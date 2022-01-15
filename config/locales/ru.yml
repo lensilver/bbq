@@ -29,11 +29,8 @@ ru:
         user_name: 'Имя пользователя'
         user_email: 'Email'
     errors:
-      models:
-        subscription:
-          attributes:
-            user:
-              user_already_exists: 'уже существует!'
+      messages:
+        email_already_exists: 'уже существует!'
       
   controllers:
     events:
