@@ -28,6 +28,10 @@ ru:
       subscription:
         user_name: 'Имя пользователя'
         user_email: 'Email'
+  models:
+    subscription:
+      errors:
+        event_host: 'не может подписаться на собственное событие'
       
   controllers:
     events:
