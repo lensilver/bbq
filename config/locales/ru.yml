@@ -28,9 +28,6 @@ ru:
       subscription:
         user_name: 'Имя пользователя'
         user_email: 'Email'
-    errors:
-      messages:
-        email_already_exists: 'уже существует!'
       
   controllers:
     events:

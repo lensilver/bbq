@@ -40,6 +40,6 @@ class Subscription < ApplicationRecord
   private
 
   def email_exist
-    errors.add(:user_email, :email_already_exists) if User.find_by(email: user_email).present?
+    errors.add(:user_email, :taken) if User.find_by(email: user_email).present?
   end  
 end
