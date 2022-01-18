@@ -35,12 +35,12 @@
   </div>
 
   <div class="actions">
-    <%= f.submit t('buttons.update') , class: 'mt-3' %>
+    <%= f.submit t('buttons.update'), class: 'btn btn-primary btn-sm mt-3' %>
   </div>
 <% end %>
 
 <h3><%= t('text.cancel_my_account')%></h3>
 
-<p><%= t('text.unhappy')%><%= button_to t('text.cancel_my_account'), registration_path(resource_name), data: { confirm: t('text.are_you_sure') }, method: :delete %></p>
+<p><%= t('text.unhappy')%><%= button_to t('text.cancel_my_account'), registration_path(resource_name), data: { confirm: t('text.are_you_sure') }, method: :delete, class: 'btn btn-secondary btn-sm mt-3' %></p>
 
 <%= link_to t('text.back'), :back %>
