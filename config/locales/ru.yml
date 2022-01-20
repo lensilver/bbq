@@ -89,6 +89,7 @@ ru:
     unhappy: 'Недовольны?'
     back: 'Назад'
     are_you_sure: 'Вы уверены?'
+    show: 'Показать событие'
     
   errors:
     messages:

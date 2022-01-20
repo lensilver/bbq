@@ -18,7 +18,7 @@ class Event < ApplicationRecord
   validates :address, presence: true
   validates :datetime, presence: true
 
-  before_validation :check_event_host
+  validate :check_event_host, unless: -> { user.present? }
 
   def visitors
     (subscribers + [user]).uniq
