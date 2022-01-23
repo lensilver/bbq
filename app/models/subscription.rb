@@ -17,6 +17,8 @@ class Subscription < ApplicationRecord
   
   validate :email_exist, unless: -> { user.present? }
 
+  validate :user_is_author, if: -> { user.present? }
+
   # Если есть юзер, выдаем его имя,
   # если нет – дергаем исходный метод
   def user_name
@@ -41,5 +43,9 @@ class Subscription < ApplicationRecord
 
   def email_exist
     errors.add(:user_email, :taken) if User.find_by(email: user_email).present?
-  end  
+  end
+
+  def user_is_author
+    errors.add(:user, :taken) if event.user == user
+  end 
 end
