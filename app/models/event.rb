@@ -18,15 +18,7 @@ class Event < ApplicationRecord
   validates :address, presence: true
   validates :datetime, presence: true
 
-  validate :check_event_host, unless: -> { user.present? }
-
-  def visitors
+    def visitors
     (subscribers + [user]).uniq
-  end
-
-   def check_event_host
-    if user == event.user
-      errors.add(:user, message: I18n.t('models.subscription.errors.event_host'))
-    end
-  end
+  end   
 end
