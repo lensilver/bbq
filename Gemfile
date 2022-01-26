@@ -12,6 +12,7 @@ gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog-aws'
 
 group :development, :test do
   gem 'pry-rails'

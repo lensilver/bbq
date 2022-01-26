@@ -19,7 +19,7 @@ ru:
         title: 'Название'
         address: 'Место проведения'
         datetime: 'Дата и время'
-        description: 'Описание'
+        description: 'Описание'  
       photo:
         photo: 'Фотография'
       comment:
