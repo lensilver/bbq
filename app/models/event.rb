@@ -7,7 +7,7 @@ class Event < ApplicationRecord
   # Чтобы Рельсы понимали, какой именно класс будет лежать
   # в модели subscribers, надо указать source
   has_many :subscribers, through: :subscriptions, source: :user
-  has_many :photos
+  has_many :photos, dependent: :destroy
 
   # Валидируем юзера на присутствие.
   # валидируются по умолчанию
