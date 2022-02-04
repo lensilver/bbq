@@ -49,11 +49,5 @@ module ApplicationHelper
 
   def fa_icon(icon_class)
     content_tag 'span', '', class: "fa fa-#{icon_class}"
-  end
-
-  def event_organizer?(event)
-    unless current_user.nil?
-      event.user == current_user || event.subscriptions.map(&:user_name).include?(current_user.name)
-    end
-  end
+  end  
 end
