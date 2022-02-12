@@ -19,7 +19,7 @@ class User < ApplicationRecord
   private
 
   def set_name
-    self.name = 'Unnamed' if name.blank?
+    self.name = ' ' if name.blank?
   end
 
   def link_subscriptions
