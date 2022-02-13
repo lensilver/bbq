@@ -11,16 +11,11 @@ class User < ApplicationRecord
   # Добавим заодно валидации для юзера
   # Имя не не более 35 символов
   validates :name, presence: true, length: {maximum: 35}
-  before_validation :set_name, on: :create
-
+  
   after_commit :link_subscriptions, on: :create
   mount_uploader :avatar, AvatarUploader
 
   private
-
-  def set_name
-    self.name = ' ' if name.blank?
-  end
 
   def link_subscriptions
     Subscription.where(user_id: nil, user_email: self.email)

@@ -21,7 +21,7 @@ ru:
         datetime: 'Дата и время'
         description: 'Описание'  
       photo:
-        photo: 'Фотография'
+        photo: 'Фото'
       comment:
         body: 'Комментарий'
         user_name: 'Имя пользователя'
