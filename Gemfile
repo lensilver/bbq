@@ -14,6 +14,7 @@ gem 'webpacker', '~> 5.0'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+gem 'mailjet'
 
 group :development, :test do
   gem 'pry-rails'
