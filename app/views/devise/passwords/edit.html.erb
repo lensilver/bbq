@@ -4,21 +4,25 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div class="field">
-    <%= f.label :password, "New password" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
-  </div>
+  <div class="row">
+    <div class="col-md-4 buffer-top">
+      <div class="form-group">
+        <%= f.label :password, "New password" %><br />
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+        <% end %> <%= fa_icon('lock') %><br />
+        <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: 'form-control' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <div class="form-group">
+        <%= f.label :password_confirmation, "Confirm new password" %> <%= fa_icon('lock') %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+      </div>
+    </div>
   </div>
 
   <div class="actions">
-    <%= f.submit "Change my password" %>
+    <%= f.submit t('change_password'), class: "btn btn-primary mt-3" %>
   </div>
 <% end %>
 
