@@ -81,7 +81,15 @@ ru:
       author: 'Автор'
       event: 'Событие'
       datetime: 'Состоится'
-      owner: 'Организатор'    
+      owner: 'Организатор'
+    photo:
+      title: 'Новое фото'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'      
 
   buttons:
     profile: 'Профиль'
