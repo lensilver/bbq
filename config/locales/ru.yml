@@ -113,6 +113,9 @@ ru:
     back: 'Назад'
     are_you_sure: 'Вы уверены?'
     show: 'Показать событие'
+    change_your_password: 'Сменить пароль'
+    new_password: 'Новый пароль'
+    confirm_new_password: 'Подтвердите пароль'
     
   errors:
     messages:
