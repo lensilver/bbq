@@ -7,15 +7,15 @@
   <div class="row">
     <div class="col-md-4 buffer-top">
       <div class="form-group">
-        <%= f.label :password %><i><%= t('text.new_password')%></i><br />
+        <%= f.label :password %><br />
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %>(<%= t('text.characters_minimum') %>))</em><br />
-        <% end %> <%= fa_icon('lock') %><br />
+        <em>(<%= @minimum_password_length %> <%= t('text.characters_minimum') %>) <%= fa_icon('lock') %></em>
+        <% end %><br />
         <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password_confirmation %><i><%= t('text.confirm_new_password')%></i><%= fa_icon('lock') %><br />
+        <%= f.label :password_confirmation %> <%= fa_icon('lock') %><br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
       </div>
     </div>
