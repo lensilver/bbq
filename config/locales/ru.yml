@@ -129,3 +129,11 @@ ru:
     photo:
       destroy_confirm: 'Вы уверены, что хотите удалить эту фотографию?'
       add: 'Добавил:'
+
+  user_mailer:
+    subscription:
+      subject: "%{user}, подписался(ась) на ваше событие %{title}!"
+    photo:
+      subject: "%{user}, добавил(а) фото в ваше событие %{title}!"
+    comment:
+      subject: "%{user}, добавил(а) комментарий к вашему событию %{title}!"    
