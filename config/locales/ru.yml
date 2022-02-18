@@ -69,14 +69,14 @@ ru:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
   event_mailer:
     comment:
-      subject: "%{user}, добавил(а) комментарий к вашему событию %{title}!"
+      subject: "Добавлен комментарий к вашему событию %{title}!"
       title: 'Новый комментарий'
       author: 'Автор'
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
     subscription:
-      subject: "%{user}, подписался(ась) на ваше событие %{title}!"
+      subject: "Новая подписка на ваше событие %{title}!"
       title: 'Новая подписка'
       name: 'Имя'
       email: 'Email'
@@ -85,7 +85,7 @@ ru:
       datetime: 'Состоится'
       owner: 'Организатор'
     photo:
-      subject: "%{user}, добавил(а) фото в ваше событие %{title}!"
+      subject: "Добавлено фото в ваше событие %{title}!"
       title: 'Новое фото'
       name: 'Имя'
       email: 'Email'
