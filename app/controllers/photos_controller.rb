@@ -2,22 +2,6 @@ class PhotosController < ApplicationController
   before_action :set_event, only: [:create, :destroy]
   before_action :set_photo, only: [:destroy]
 
-  # def create
-  #   # Создаем новую фотографию у нужного события @event
-  #   @new_photo = @event.photos.build(photo_params)
-
-  #   # Проставляем у фотографии пользователя
-  #   @new_photo.user = current_user
-
-  #   if @new_photo.save
-  #     # Если фотка сохранилась, редиректим на событие с сообщением
-  #     redirect_to @event, notice: I18n.t('controllers.photos.created')
-  #   else
-  #     # Если нет — рендерим событие с ошибкой
-  #     render 'events/show', alert: I18n.t('controllers.photos.error')
-  #   end
-  # end
-
   def create
     @new_photo = @event.photos.build(photo_params)
 
@@ -70,10 +54,10 @@ class PhotosController < ApplicationController
   def notify_subscribers(event, photo)
     all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
 
+    all_emails.delete(photo.user.email)
+
     all_emails.each do |mail|
-      unless photo.user.email == mail
-        EventMailer.photo(event, photo, mail).deliver_now
-      end
+      EventMailer.photo(event, photo, mail).deliver_now
     end
   end
 end
