@@ -8,7 +8,6 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'dotenv-rails'
 gem 'rails-i18n'
-gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 gem 'carrierwave'
@@ -23,4 +22,8 @@ end
 group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
+end
+
+group :production do
+  gem 'pg', '~> 1.1'
 end
