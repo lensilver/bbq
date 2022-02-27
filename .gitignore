@@ -24,8 +24,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-config/database.yml
-config/credentials.yml.enc
 
 /public/packs
 /public/packs-test
@@ -37,3 +35,5 @@ yarn-debug.log*
 
 public/uploads/
 .env
+
+config/database.yml

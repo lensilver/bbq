@@ -55,11 +55,10 @@
       <div class="event-map" id="map" data-address="<%= @event.address %>"></div>
       
       <div class="event-owner">
-        <h4>Зовет:</h4>
+        <h4><%= t('subscriptions.call')%></h4>
           <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
-      <div class="event-subscriptions">
-        <h4>Пойдут:</h4>
+      <div class="event-subscriptions">        
         <div>
           <p>
           <%= render partial: 'subscriptions/subscription',
@@ -69,7 +68,7 @@
       </div>
       <% unless already_subscribed?(@event) %>
       <div class="event-subscription-form">
-        <h4>Я пойду:</h4>
+        <h4><%= t('subscriptions.i_will_go') %></h4>
         <div>
           <%= render partial: 'subscriptions/form', locals: {
           subscription: @new_subscription || @event.subscriptions.build

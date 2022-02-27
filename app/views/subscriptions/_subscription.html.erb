@@ -1,4 +1,5 @@
 <span class="subscription">
+  <h4><%= t('.will_go') %></h4>
   <% if subscription.user.present? %>
     <%= render partial: 'users/user', object: subscription.user %>
   <% else %>

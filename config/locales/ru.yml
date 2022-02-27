@@ -67,6 +67,9 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+      will_go: 'Пойдут:'
+    i_will_go: 'Я пойду:'
+    call: 'Зовет:'
   event_mailer:
     comment:
       subject: "Добавлен комментарий к вашему событию %{title}!"
