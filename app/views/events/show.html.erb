@@ -46,7 +46,7 @@
           locals: {comment: @new_comment || @event.comments.build} %>
         <div class="buffer-both">
           <%= render partial: 'comments/comment',
-                     collection: @event.comments.except(@new_comment) %>          
+                     collection: @event.comments.except(@new_comment) %>
         </div>
       </div>
     </div>
@@ -58,7 +58,8 @@
         <h4><%= t('subscriptions.call')%></h4>
           <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
-      <div class="event-subscriptions">        
+      <div class="event-subscriptions">
+        <h4><%= t('subscriptions.will_go') if @event.subscriptions.except(@new_subscription).any? %></h4>
         <div>
           <p>
           <%= render partial: 'subscriptions/subscription',
@@ -76,6 +77,6 @@
         </div>
       </div>
       <% end %>
-    </div>  
+    </div>
   </div>
 </div>
